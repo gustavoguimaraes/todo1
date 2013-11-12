@@ -1,4 +1,4 @@
-todo-spirit-animals
+Katie Hoffman's Todos
 ===================
 
-Randomly prints one of the names of the four team members
+Daily assignments completed over the course of Flatiron BK000 
