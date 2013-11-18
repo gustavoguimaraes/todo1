@@ -85,7 +85,6 @@ hash.each do | x, y|
 end
 puts winner_array
 puts
-
 #Manual solution: arr_winner =[{:blake => "winner", :carlos => "winner"}]
 # puts arr_winner
 
@@ -98,14 +97,40 @@ second_array = [5,9,4]
 
 first_array << second_array
 puts first_array
-
+puts
 
 # 11. find all words that begin with "a" in the following array
 #   ["apple", "orange", "pear", "avis", "arlo", "ascot" ]
+puts 11
+array = ["apple", "orange", "pear", "avis", "arlo", "ascot"]
+  array.each do |word|
+   if word[0] == "a"
+     puts word
+   end
+  end
+puts
+
 # 11. sum all the numbers in the following array
 #   [11,4,7,8,9,100,134]
+puts "11.a"
+sum_array = [11,4,7,8,9,100,134]
+addition = 0
+sum_array.each { |num| addition= addition + num}
+
+puts addition
+puts
+
 # 12. Add an "s" to each word in the array except for the 2nd element in the array?
 #   ["hand","feet", "knee", "table"]
+ puts 12
+ add_s_array = ["hand","feet", "knee", "table"]
+
+ add_s_array.each do |word|
+ next if word == add_s_array[1]
+ word = word << "s"
+ end
+ puts add_s_array
+
 # CHALLENGE
  
 # word count
