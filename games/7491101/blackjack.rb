@@ -36,9 +36,9 @@ def blackjack
 				if answer == "hit"
 						new_card = card 
   						total_cards += new_card
-  						puts " You new card is #{new_card} and now you have in your hand a total of #{total_cards}"
+  						puts " Your new card is #{new_card} and now you have in your hand a total of #{total_cards}"
 					else
-						break
+					break
 				end
 	end
 
