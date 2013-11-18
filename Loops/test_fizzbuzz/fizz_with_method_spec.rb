@@ -1,4 +1,4 @@
-require './fizzbuzz'
+require './fizzbuzzls'
 
 describe "#fizzbuzz" do
 
