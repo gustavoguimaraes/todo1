@@ -18,4 +18,3 @@ require './dog_years'
         end
     end
 
-end
