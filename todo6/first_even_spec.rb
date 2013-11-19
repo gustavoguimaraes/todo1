@@ -1,4 +1,4 @@
-require_relative "even_solution"
+require_relative "./first_even"
  
 describe "first even" do
   it "should return the first even number in an array" do
