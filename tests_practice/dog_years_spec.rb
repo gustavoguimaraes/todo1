@@ -15,6 +15,6 @@ require './dog_years'
     describe "#age_in_dog_years" do
         it "should return age * 7" do
             expect(age_in_dog_years(3)).to eq(21)
-        end
+        end       
     end
 
