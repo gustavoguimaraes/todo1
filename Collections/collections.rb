@@ -44,29 +44,37 @@ puts my_array
 # 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
 #   ["blake", "ashley", "scott"]
 puts 7
-my_hash = {:blake => "bl$ke", :ashley => "as$ley", :scott => "sc$tt"}
+my_hash = {}
+array = ["blake", "ashley", "scott"] #:blake => "bl$ke", :ashley => "as$ley", :scott => "sc$tt"}
+  array.each do | name |
+  	my_hash[name] = name[0..1] + "$" + name[3..name.length]
+  end
 puts my_hash
+puts
 
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
 puts 8
 
 eight_array = [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]
-greater_than_10 = []
-less_than_10 = []
+hash_of_numbers = {:greater_than_10 => [], :less_than_10 => []}
+
+#greater_than_10 = {}
+#less_than_10 = {}
 
 eight_array.each do |elem| 
+	
 	if elem < 10
-		less_than_10 << elem
+		hash_of_numbers[:less_than_10] << elem
 	else
-		greater_than_10 << elem
+		hash_of_numbers[:greater_than_10] << elem
 	end
 end
 
-puts greater_than_10.sort
+puts hash_of_numbers
 puts
-puts less_than_10.sort
-puts
+#puts less_than_10.sort
+
 
 # Manual manner. hashes = {:greater_than_10 => [15, 100, 100, 1000], :less_than_10 => [1, 1, 2, 3, 5]}
 #  puts hashes
