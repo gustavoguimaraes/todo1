@@ -98,22 +98,36 @@ puts
 #   Christmas: Lights and Wreath
 #   New Years: Party Hats
 # ```
-def get_supplies(holiday_supplies)
-  holiday_supplies.each do | season, holiday |
-    holiday.each do | name_holiday, supplies |
-      new_hash = {}
-     new_hash[name_holiday] = supplies
-     puts new_hash
-   end
- end
+puts 6
+holiday_supplies.each do |season, holiday_hash| 
+    puts season.to_s + ": "
+      holiday_hash.each do |day, supply|
+        print day.to_s + ": " 
+        supply.each do |supply| 
+          print supply.to_s + ", "
+        end
+      end
 end
+#  this is my former code: 
+#def get_supplies(holiday_supplies)
+#   holiday_supplies.each do | season, holiday |
+#     holiday.each do | name_holiday, supplies |
+#       new_hash = {}
+#      new_hash[name_holiday] = supplies
+#      puts new_hash
+#    end
+#  end
+# end
 
-get_supplies(holiday_supplies)
-puts
+# get_supplies(holiday_supplies)
+# puts
+
+
 # 7. Write a method to collect all holidays with BBQ.
 
 # `holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]`
 
+puts 7
 def find_BBQ_in_holidays(holiday_supplies)
    bbq_holiday = []
   holiday_supplies.each do |season, holiday |
