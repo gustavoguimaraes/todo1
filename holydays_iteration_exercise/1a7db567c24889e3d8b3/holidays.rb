@@ -100,12 +100,13 @@ puts
 # ```
 puts 6
 holiday_supplies.each do |season, holiday_hash| 
-    puts season.to_s + ": "
+    puts season.to_s.capitalize! + ": "
       holiday_hash.each do |day, supply|
         print day.to_s + ": " 
         supply.each do |supply| 
           print supply.to_s + ", "
         end
+      puts
       end
 end
 #  this is my former code: 
@@ -126,7 +127,7 @@ end
 # 7. Write a method to collect all holidays with BBQ.
 
 # `holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]`
-
+puts
 puts 7
 def find_BBQ_in_holidays(holiday_supplies)
    bbq_holiday = []
