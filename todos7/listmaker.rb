@@ -20,3 +20,31 @@ def add_number_to_string(arr)
 end
 
 add_number_to_string(["ich", "ni", "san"])
+
+# I could also have solve this by implementing array_with_index
+#def make_list array
+#y = []
+#array.each_with_index |element, index |
+#y << " #{index + 1}. #{element}"
+#end
+#end
+
+#index is a number that starts at 0 and if you want it can be incremented by 1 (index +1)
+
+
+# Even more refactoring
+
+# def make_list array
+# 	array.map.with_index { |elem, index| "#{index+1}. #{elem}" }
+# end
+
+# Using this method inside a Class
+
+# Class Array
+# def make_list
+# 	self.map.with_index { |elem, index| "#{index +1}. #{elem}"}
+# end
+# end
+
+# you call it on a Class like this: 
+# [some array elememtns].make_list 
