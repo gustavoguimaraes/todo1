@@ -22,11 +22,9 @@ class Deli
 		number = 0
 		new_array = []
 		line.each do |elem|
-		number += 1 
-		a = "#{number}." + " " + elem
-		new_array << a
-		
-		#line << "#{number}. #{elem}"
+			number += 1 
+			a = "#{number}." + " " + elem
+			new_array << a
 		end
 		line = new_array
 		new_array
