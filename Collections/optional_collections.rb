@@ -92,7 +92,8 @@ end
 change_char(stuff,"$")
 
 
-# Count the number of times each word appears in a string and store that data in a hash that has the word as the key and the count as the value.
+# Count the number of times each word appears in a string and store that data in a hash that has the word 
+#as the key and the count as the value.
  
 #   string = "the flatiron school is better than general assembly"
  
