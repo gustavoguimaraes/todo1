@@ -20,27 +20,30 @@ pigeon_data = {
 }
 
 pigeon_list = {}
+  #co_ge_li = :color atributes ={: purlple=> blah balh, :grey, blah, blah}
+  pigeon_data.each do |co_ge_li, hashes|
+    # gender = :male, female  pi_name = ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"] 
+    hashes.each do |attributes, pi_name|
 
-pigeon_data.each do |key, value|
-    value.each do |attri, pigeon_name|
-      pigeon_name.each do |pigeon|
-      unless pigeon_list[pigeon]
-        pigeon_list[pigeon] = {} 
-      end
-       unless pigeon_list[pigeon][:color]
-        pigeon_list[pigeon][:color] = [] 
-      end
-    
-    if key == :color
-      pigeon_list[pigeon][key] << attri
-    else 
-      pigeon_list[pigeon][key] = attri
-   end
+      #name = each individual pigeon
+      pi_name.each do |name|
+
+        
+          pigeon_list[name] = {} unless pigeon_list[name]
+          pigeon_list[name][:color] =[] unless pigeon_list[name][:color]
+
+          if co_ge_li == :color
+             pigeon_list[name][co_ge_li] << attributes
+           else
+            pigeon_list[name][co_ge_li] = attributes
+          end
+         
       end
     end
   end
-  ap pigeon_list
+ 
 
+  ap pigeon_list 
 
 # Iterate over the hash above collecting each pigeon by name and insert it
 # as the key of a new hash where each name holds the attributes for that bird. 
