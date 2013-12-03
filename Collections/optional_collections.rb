@@ -17,7 +17,7 @@ require 'awesome_print'
  	end
  end
 
-#ap start_with_r(tools)
+ap start_with_r(tools)
 
 #2.
 # Create a new array from the captain_planet array with all the elements that contain the letter "a".  
@@ -31,7 +31,8 @@ def contain_letter_a(arr)
 	end
 	ap a_array
 end
-#contain_letter_a(captain_planet)
+contain_letter_a(captain_planet)
+
 
 #3.
 #captain_planet refactored with the help of Chris
@@ -39,13 +40,13 @@ def check_word_for_a(array)
   array.select { |element| element.include?("a") }
 end
 
-#p check_word_for_a(captain_planet)
+p check_word_for_a(captain_planet)
 
 
 #4.
 # Identify the first element in the stuff array that begins with the letters "wa".
   stuff = ["candy", :pepper, "wall", :ball, "wacky"]
-def wa_indentify(array)
+def waa_indentify(array)
 	wa_arr = []
  	i = 0
  	array.each do |element|
@@ -57,7 +58,7 @@ def wa_indentify(array)
 ap wa_arr[0]
  end
 
-#wa_indentify(stuff)
+waa_indentify(stuff)
 
 #refactored
 def find_word_wa(array)
@@ -81,7 +82,7 @@ find_word_wa(stuff)
 ap wa_arr
  end
 
- #wa_all_indentify(stuff)
+ wa_all_indentify(stuff)
 
 #refactored
 def find_all_word_wa(array)
@@ -117,7 +118,7 @@ def remove_non_strings(array)
 	end
 end
 
-#remove_non_strings(stuff)
+remove_non_strings(stuff)
 
 #7. 
 # Change the third letter of all strings in an array.  Your solution should work for arrays that have mixed types of objects inside it.
@@ -143,7 +144,7 @@ def change_char(array, char)
 ap array
 end
 
-#change_char(stuff,"$")
+change_char(stuff,"$")
 
 #8.
 # Count the number of times each word appears in a string and store that data in a hash that has the word 
@@ -163,7 +164,7 @@ def count_words(str)
  ap hash_words
 end
 
-#count_words(string)
+count_words(string)
  
 #9.
 # Count the number of times each hash appears in the array, remove any duplicates and 
@@ -173,26 +174,22 @@ array1 = [{:name => "blake"}, {:name => "blake"}, {:name => "blake"}, {:name => 
 # becomes [{:name => "blake", :count => 3}, {:name => "ashley", :count => 1}]
 
 def hash_name_count(array)
- 	array2 = []
- 	array3 =[]	
+ 	array2 = []	
  	num = 0
 	# hash is {:name => "blake"}
 	array.each do |hash|
 		array.each do |other_hash|
 			if hash[:name] == other_hash[:name]
-				 hash[:count] = 1
-			else
-				hash[:count] = num += 1
+				hash[:count].nil? ? hash[:count] = 1 : hash[:count] += 1
 			end
 
 	end
 
 		array2 << hash
+
 	
 	end
-	#hardcoded
-	ap array2[-1] 
-	ap array2[-2]
+	ap array2.uniq
 end
 
 hash_name_count(array1)
@@ -268,7 +265,7 @@ def becomes_third(first, second)
  ap third
 end
 
-#becomes_third(first_array, second_array)
+becomes_third(first_array, second_array)
 
  
 # Return all hashes that have a value of "cool" for the :temperature key.
@@ -297,7 +294,7 @@ def return_cool(array)
 ap cool
 end
 
-#return_cool(cool_array)
+return_cool(cool_array)
  
 # Convert the nested data structure from it's current structure
 # to a structure that organizes the schools by location.
@@ -331,7 +328,9 @@ def reorganize_struc(hash)
 new_hash= {}
 	#iterate over each hash element: {(key)"flatiron school bk" => (value){:location => "NYC",:price => "free"}
 	hash.each do |hash_elem, value_attributes|
+		 #new_hash = {  }
 		if new_hash[value_attributes[:location]].nil?
+
 			new_hash[value_attributes[:location]] = []
 			new_hash[value_attributes[:location]]<< {:school => hash_elem, :price => value_attributes[:price]} 
 		
@@ -342,7 +341,7 @@ new_hash= {}
 ap new_hash
 
 end
-#reorganize_struc(current_struc)
+reorganize_struc(current_struc)
 
 
 
