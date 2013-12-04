@@ -31,7 +31,9 @@ def tweet_sub(str)
 ap new_string.join(" ")
 end
 
-#tweet_sub(string)
+tweet_sub(string)
+
+
 
 tweets = ["Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!",
           "OMG you guys, you won't believe how sweet my kitten is. My kitten is like super cuddly and too cute to be believed right?",
@@ -40,27 +42,36 @@ tweets = ["Hey guys, can anyone teach me how to be cool? I really want to be the
 
 
 
-def tweet_if_short(sth)
+def truncated(string)
+
+	if string.size > 140
+		string[0..137] + "..."
+	else
+		string
+	end
+
+end
+
+
+
+def tweet_if_short(tweets)
 	modified_tweet =[]
-	sth.each do |tweet|
+	tweets.each do |tweet|
 		
 		if tweet.size > 140
 			new_tweet = tweet.split(" ").collect do |word|
 			 	 subs(word) 	
 			end.join(" ")
-			
-			if new_tweet.size > 140
-				 truncated = new_tweet[0..137] + "..."
-				modified_tweet<< truncated
-			end
+
+			 modified_tweet << truncated(new_tweet)
 
 		 else
-		 	ap tweet
+		 	modified_tweet << tweet
 		end
 
 	end
  
- ap modified_tweet.join
+ ap modified_tweet
  
 end
 

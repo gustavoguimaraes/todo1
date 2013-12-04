@@ -21,6 +21,7 @@ Write a method to shorten a string based on the allowed substitutes
 Write a method that iterates over the list of tweets, shortens them, and prints the results to the screen
 hint: you'll need a way to look up each word and see if it has a substitution
 
+################################################################
 Now the client has come back to you. They love the program, but they noticed that even tweets that are under 140 characters are being shortened. Now they want you to only shorten the tweet if it's too long.
 
 Objectives
@@ -31,3 +32,4 @@ Things are going great, but you're noticing that some tweets are too long still,
 Objectives
 
 Modify your program to truncate the tweet to 140 characters if it's still too long after substitution
+
