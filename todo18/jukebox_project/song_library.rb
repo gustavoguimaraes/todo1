@@ -1,5 +1,5 @@
 def full_library
-  {
+   {
     :"U2" => {
       :albums => {
         :"The Joshua Tree" => {
