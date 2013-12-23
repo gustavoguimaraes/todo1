@@ -6,7 +6,6 @@ def run
     command = get_command
     
     while command.downcase != "exit" do
-   
     run_command(command) unless command.downcase == "exit"
     command = get_command
     end

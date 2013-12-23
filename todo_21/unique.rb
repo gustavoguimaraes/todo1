@@ -1,11 +1,14 @@
 # instructions: implement Array.uniq
 
-class Array
- 
+class Arr
+ attr_reader :test
+  def initialize(test = [2,2,2,4,4,4,5])
+    @test = test
+  end
   
-  def uniq
+  def un
     array = []
-    self.each do |element|
+    test.each do |element|
       array << element unless array.include? element
     end
       array
@@ -13,5 +16,8 @@ class Array
 
 end
 
-p [2,2,2,4,4,4,5].uniq
+foo = Arr.new
+
+
+p foo.un
 

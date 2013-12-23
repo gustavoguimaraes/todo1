@@ -10,50 +10,41 @@
 # I'd like to be able to set values in our fake hash.
 # I'd like to be able to find all values that have keys beginning with the letter a.
 # I'd like to be able to get all the keys in the hash in a descending alphabetized array.
-require 'debugger'
 
 class FakeHashWrapper
  
  attr_reader :hash
    
-   def initialize(hash ={:blake => "the best",:ashley => "awesome",:armando => "angry"})
-   @hash = hash
+   def initialize
+   @hash = {}
    end
  
-   def find_keys(kes)
-    hash.each do |key, value|
-      value if kes == key.to_s
-    end
+   def [](key)
+    hash[key.to_sym]
+      
    end
 
-  def set_values(kes,val)
-    @hash[kes.to_sym] = val
+  def []=(key,value)
+    @hash[key.to_sym] = value
   end
 
-  def find_values_a
-    hash.each do |key, value|
-      if value[0] == "a"
-         value
-      end
+  def find_values_at(letter)
+    hash.select do |key, value|
+      value if key[0] == letter
     end
   end
 
-  def get_hash_sorted 
-    temp_arr = []
-    hash.each do |key, value|
-      temp_arr << key
-    end
-      temp_arr.sort.reverse
+  def sorted_descending_order 
+    hash.keys.sort.reverse
   end
 
 end
 
-f = FakeHashWrapper.new
+#  f = FakeHashWrapper.new
+# f["tara"] = "amazing"
+# f[:blake] = "good"
+# f["tara"]
 
-f.set_values("blake", "the bestest")
+# f.find_values_at("t")
 
-f.find_keys("blake")
-
-#f.find_values_a
-
-#f.get_hash_sorted
+#f.sorted_descending_order 
