@@ -1,0 +1,18 @@
+TODO25
+http://sewingandembroiderywarehouse.com/embtrb.htm
+ 
+there is something wrong with this page.
+
+using your web inspector identify what is wrong.
+ 
+as algorithmically as possible, explain why this error causes this visual effect.
+ 
+ 
+what are the other things wrong with this page? why do you think they are wrong?
+ 
+when was this page made? how? tell how you figured it out.
+
+
+"THERE ARE A LOT OF NESTING. UNECESSARY INLINE CSS ELEMENTS AND ON PAGE STYLE. NO EXTERNAL CSS AT ALL."
+
+"IT IS HTML 3.2, SO A TAD OUTDATED. WEBSITE BUILT USING MICROSOFTPAGE 5.0 . H3 tags never close. font size is measured in em. Every H3 is increases relative to the other one and that's why the font is getting bigger as you move down the page and go from a H3 to another."
