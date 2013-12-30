@@ -13,38 +13,22 @@ class Deli
 
 	attr_accessor:line
 
-	def initialize array
-		@line = array  #["Ashley", "Steve", "Blake"]
-		
+	def initialize 
+		@line = []  #["Ashley", "Steve", "Blake"]
 	end
 
-	def take_a_number
-		number = 0
-		new_array = []
-		line.each do |elem|
-			number += 1 
-			a = "#{number}." + " " + elem
-			new_array << a
-		end
-		line = new_array
-		new_array
+	def take_a_number(customer)
+		line << customer
+		line.map.with_index{|elem, index| "#{index+1}. #{elem}"}
 	end
 
 	def serving_now
 		customer = line.first
 		 serving = "Serving now #{customer}"
-		line.delete_at(0)
-		"These people are next: #{line}"
-		serving
+		 line.delete_at(0)
+		 serving
 	end
 
 end
-
-
-gus = Deli.new(["Ashley", "Steve", "Blake"])
-
-gus.take_a_number
-
-gus.serving_now
 
 

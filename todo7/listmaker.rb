@@ -19,7 +19,15 @@ def add_number_to_string(arr)
  new_array
 end
 
-add_number_to_string(["ich", "ni", "san"])
+# after refactoring I got this:
+
+class List
+  def make_list(array)
+  array.collect.with_index{|elem, index| "#{index + 1}. #{elem}"} 
+  end
+end
+
+
 
 # I could also have solve this by implementing array_with_index
 #def make_list array
