@@ -3,7 +3,6 @@
 # I can also solve this with gsub and regex
 # n.to_s.reverse.gsub(some regex).regex
 def separate_with_comma(n)
-  # temp = []
   modify = n.to_s.reverse
     if modify.length < 3
       modify.reverse
